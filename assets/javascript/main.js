@@ -10,6 +10,8 @@ var gianni = {
 
 for(var prop in gianni){
 
+    document.getElementById("studgianni").innerHTML = "Lo studente si chiama " + gianni.nome + " " + gianni.cognome + " e ha " + gianni.eta + " anni."
+
     console.log(gianni.nome, gianni.cognome, gianni.eta);
     
 }
