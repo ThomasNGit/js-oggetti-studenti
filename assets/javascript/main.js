@@ -2,15 +2,15 @@
 //Stampare a schermo attraverso il for in tutte le proprietà.
 
 var gianni = {
-    nome : "Gianni",
-    cognome : "Rossi",
-    età : "30"
+    "nome" : "Gianni",
+    "cognome" : "Rossi",
+    "eta" : "30"
 }
 
 
 for(var prop in gianni){
 
-    console.log(prop);
+    console.log(gianni.nome, gianni.cognome, gianni.eta);
     
 }
 
@@ -43,6 +43,7 @@ var user2 = {
 
 }
 
+
 studenti.push(user2)
 
 console.log(user2);
@@ -67,8 +68,11 @@ for (i = 0; i < studenti.length; i++){
 
     for(var studente in studenti[i])
 
-    console.log(studente);
-    
+    document.getElementById("stud1").innerHTML = "Nome del primo studente: " + user1.nome + " " + user1.cognome;
+  
+    document.getElementById("stud2").innerHTML = "Nome del secondo studente: " + user2.nome + " " + user2.cognome;
+
+    document.getElementById("stud3").innerHTML = "Nome del terzo studente: " + user3.nome + " " + user3.cognome;
 
 }
 
@@ -87,6 +91,8 @@ var user4 = {
 
 studenti.push(user4);
 
+document.getElementById("stud4").innerHTML = "Nome, cognome ed età del quarto studente, il ritardatario: " + user4.nome + " " + user4.cognome + " e ha " + user4.eta + " anni."
+
 console.log(studenti);
 
 
@@ -99,7 +105,7 @@ console.log(studenti);
 function nomeUser(nome){
 
     nome = prompt("Qual è il tuo nome?")
-
+   
     return nome
 }
 
