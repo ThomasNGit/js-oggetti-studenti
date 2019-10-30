@@ -73,6 +73,24 @@ for (i = 0; i < studenti.length; i++){
 }
 
 
+// Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
+
+var user4 = {
+    
+    "nome" : nomeUser(),
+
+    "cognome" : cognomeUser(),
+
+    "eta" : etaUser()
+
+}
+
+studenti.push(user4);
+
+console.log(studenti);
+
+
+
 
 //blocco funzioni
 
@@ -93,4 +111,13 @@ function cognomeUser(cognome){
 
     return cognome
 
+}
+
+//funzione che chiede l'età
+
+function etaUser(eta){
+
+    eta = prompt("E quanti anni hai?")
+
+    return eta
 }
