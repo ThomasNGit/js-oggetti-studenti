@@ -12,7 +12,7 @@ for(var prop in gianni){
 
     document.getElementById("studgianni").innerHTML = "Lo studente si chiama " + gianni.nome + " " + gianni.cognome + " e ha " + gianni.eta + " anni."
 
-    console.log(gianni.nome, gianni.cognome, gianni.eta);
+    console.log(gianni[prop]);
     
 }
 
@@ -35,7 +35,6 @@ var user1 = {
 
 studenti.push(user1)
 
-console.log(user1);
 
 var user2 = {
 
@@ -45,10 +44,8 @@ var user2 = {
 
 }
 
-
 studenti.push(user2)
 
-console.log(user2);
 
 var user3 = {
 
@@ -60,15 +57,13 @@ var user3 = {
 
 studenti.push(user3)
 
-console.log(user3);
-
 console.log(studenti);
+
 
 
 //ciclo per stampare nome e cognome degli studenti
 for (i = 0; i < studenti.length; i++){
 
-    for(var studente in studenti[i])
 
     document.getElementById("stud1").innerHTML = "Nome del primo studente: " + user1.nome + " " + user1.cognome;
   
@@ -129,3 +124,40 @@ function etaUser(eta){
 
     return eta
 }
+//aggiungo l'età dei primi 3 studenti
+
+user1.eta = 30;
+
+user2.eta = 32;
+
+user3.eta = 3;
+
+
+
+//log dei vari studenti
+
+for(var prop1 in user1){
+
+    console.log("Lo studente uno si chiama: " + user1.nome, user1.cognome);
+    
+}
+
+for(var prop2 in user2){
+
+    console.log("Lo studente due si chiama: " + user2.nome, user2.cognome);
+    
+}
+
+for(var prop3 in user3){
+
+    console.log("Lo studente tre si chiama: " + user2.nome, user2.cognome);
+    
+}
+
+for(var prop4 in user4){
+
+    console.log("Lo studente quattro si chiama: " + user4.nome, user4.cognome, "e ha", user4.eta, "anni.");
+    
+}
+
+
